@@ -1,6 +1,8 @@
 @extends('layout')
 
 @section('content')
+    <h3 style="text-align: center">Edit Todo</h3>
+
     <form action="/{{ $todo->id }}" method="POST">
         @csrf
         @method('PUT')

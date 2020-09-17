@@ -1,6 +1,8 @@
 @extends('layout')
 
 @section('content')
+    <h3 style="text-align: center">Add Todo</h3>
+    
     <form action="/" method="post">
         @csrf
 
