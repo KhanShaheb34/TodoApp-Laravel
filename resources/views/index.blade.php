@@ -3,7 +3,7 @@
 @section('content')
     <table class="table table-striped border">
         <thead class="text-center">
-            <th colspan="3">
+            <th colspan="2">
                 <h3>Pending Todo</h3>
             </th>
         </thead>
@@ -18,10 +18,10 @@
                             </a>
                         {!! $todo->completed==1 ? "</del>":"" !!}
                     </h4></td>
-                    <td><a class="btn btn-success" href="/{{ $todo->id }}/complete">Complete</a></td>
-                    <td><a class="btn btn-primary" href="/{{ $todo->id }}/edit">Edit</a></td>
-                    <td>
-                        <form action="/{{ $todo->id }}" method="post">
+                    <td style="text-align: right">
+                        <a class="btn btn-success" href="/{{ $todo->id }}/complete">Complete</a>
+                        <a class="btn btn-primary" style="display: inline-block" href="/{{ $todo->id }}/edit">Edit</a>
+                        <form action="/{{ $todo->id }}" method="post" style="display: inline-block">
                             @csrf
                             @method('delete')
 
